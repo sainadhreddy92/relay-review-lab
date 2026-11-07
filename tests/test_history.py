@@ -1,7 +1,7 @@
 import unittest
 from relay.history import prepare
 
-class HistoryReview(unittest.TestCase):
+class TestHistory(unittest.TestCase):
     def test_recent_pair(self):
         self.assertEqual(prepare(iter(["a", "b", "c"]), 2), ["b", "c"])
 
