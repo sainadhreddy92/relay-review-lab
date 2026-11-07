@@ -1,7 +1,7 @@
 import unittest
 from relay.tools import Tools
 
-class CacheReview(unittest.TestCase):
+class TestTools(unittest.TestCase):
     def test_repeat_lookup(self):
         calls = []
         def fetch(catalog, item):
