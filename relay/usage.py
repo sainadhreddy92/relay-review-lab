@@ -5,4 +5,5 @@ def usage_summary(usage):
         "input": input_tokens,
         "output": output_tokens,
         "total": input_tokens + output_tokens,
+        "cached_input": usage.get("cache_read_tokens", 0),
     }
