@@ -1,7 +1,7 @@
 import unittest
 from relay.streaming import stream_text
 
-class StreamReview(unittest.TestCase):
+class TestStreaming(unittest.TestCase):
     def test_timeout_before_open(self):
         attempts = []
         def open_stream():
