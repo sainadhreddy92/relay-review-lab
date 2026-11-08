@@ -30,7 +30,7 @@ assert reply["text"] == "Hello, Ada"
 assert reply["usage"]["total"] == 5
 ```
 
-`respond` copies the message iterable into a list in its original order, passes it to the provider, and joins the nonempty chunks. After consuming the stream, it reads `input_tokens` and `output_tokens`. Each missing counter defaults to zero. The result includes `input`, `output`, and their `total`.
+`respond` copies the message iterable into a list in its original order, passes it to the provider, and joins the nonempty chunks. Pass `limit` to send only that many of the most recent messages, still oldest first; `limit=0` sends an empty history, a negative limit raises `ValueError`, and a non-integer limit raises `TypeError`. After consuming the stream, it reads `input_tokens` and `output_tokens`. Each missing counter defaults to zero. The result includes `input`, `output`, and their `total`.
 
 ## Consume a stream
 
